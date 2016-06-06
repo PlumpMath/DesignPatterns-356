@@ -31,7 +31,6 @@ namespace DesignPatterns.DesignPatternsClasses
             Console.WriteLine("OperationBC was done");
         }
     }
-
     class SubSystemA
     {
         public void OperationA()
