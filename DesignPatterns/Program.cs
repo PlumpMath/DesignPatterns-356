@@ -36,11 +36,26 @@ namespace DesignPatterns
             Console.WriteLine("***************************************");
             Console.WriteLine();
         }
+        // State
+        public static void TestState()
+        {
+            Console.WriteLine("- {0} -", typeof(State).Name);
+            Console.WriteLine();
+
+            ContextWithState context = new ContextWithState(new ConcreteStateA());
+            context.Request();
+            context.Request();
+
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+        }
+
 
         static void Main(string[] args)
         {
             TestFacade();
             TestAbstractFactory();
+            TestState();
 
             Console.ReadLine();
         }

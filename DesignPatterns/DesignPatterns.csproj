@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DesignPatternsClasses\AbstractFactory.cs" />
     <Compile Include="DesignPatternsClasses\Facade.cs" />
+    <Compile Include="DesignPatternsClasses\State.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
