@@ -49,13 +49,32 @@ namespace DesignPatterns
             Console.WriteLine("***************************************");
             Console.WriteLine();
         }
+        // Memento
+        public static void TetsMemento()
+        {
+            Console.WriteLine("- {0} -", typeof(Memento).Name);
+            Console.WriteLine();
 
+            Originator originator = new Originator();
+            originator.State = "On";
+            Console.WriteLine("Current state {0}", originator.State);
+            Caretaker caretaker = new Caretaker();
+            caretaker.Memento = originator.CreateMemento();
+            originator.State = "Off ";
+            Console.WriteLine("Changed state {0}", originator.State);
+            originator.SetMemento(caretaker.Memento);
+            Console.WriteLine("First state {0}", originator.State);
+
+            Console.WriteLine("***************************************");
+            Console.WriteLine();
+        }
 
         static void Main(string[] args)
         {
             TestFacade();
             TestAbstractFactory();
             TestState();
+            TetsMemento();
 
             Console.ReadLine();
         }
